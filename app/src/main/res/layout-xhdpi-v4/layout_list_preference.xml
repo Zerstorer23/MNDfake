@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:background="@drawable/style_common___list" android:layout_width="match_parent" android:layout_height="match_parent">
+    <LinearLayout android:orientation="horizontal" android:id="@+id/llTag" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <TextView android:background="@drawable/img_common___list_header_round_up" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="#000d9ae0" android:id="@+id/tvListHeaderBg" android:background="@drawable/img_common___list_header_text" android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+            <TextView android:textSize="18sp" android:textStyle="bold" android:textColor="#0d9ae0" android:id="@+id/tvListHeaderText" android:paddingTop="14dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <TextView android:background="@drawable/img_common___list_header_round_down" android:layout_width="wrap_content" android:layout_height="match_parent"/>
+        <TextView android:background="@drawable/img_common___list_header_end" android:layout_width="match_parent" android:layout_height="match_parent"/>
+    </LinearLayout>
+    <TextView android:textSize="18sp" android:textColor="#1e1e28" android:id="@+id/tvTitle1" android:paddingLeft="10dp" android:paddingTop="13dp" android:paddingRight="10dp" android:paddingBottom="13dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title1" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+    <TextView android:textSize="18sp" android:textColor="#1e1e28" android:id="@+id/tvTitle" android:paddingLeft="10dp" android:paddingTop="10dp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" android:layout_alignParentLeft="true"/>
+    <TextView android:textSize="16sp" android:textColor="#898d98" android:id="@+id/tvDescription" android:paddingLeft="10dp" android:paddingRight="80dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="description" android:layout_below="@+id/tvTitle"/>
+    <CheckBox android:id="@+id/cbSelect" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:button="@drawable/style_setting___check" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    <ImageView android:id="@+id/ivDetail" android:background="@drawable/img_common___arrow_right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+    <TextView android:textSize="16sp" android:textColor="#158acf" android:gravity="right" android:id="@+id/tvValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="25dp" android:text="value" android:layout_toRightOf="@+id/tvTitle1" android:layout_alignParentRight="true" android:layout_centerVertical="true"/>
+</RelativeLayout>

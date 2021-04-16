@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:fillBefore="true">
+    <scale android:duration="6000" android:pivotX="50%" android:pivotY="50%" android:repeatCount="infinite" android:repeatMode="restart" android:fromXScale="0" android:toXScale="8" android:fromYScale="0" android:toYScale="8"/>
+    <alpha android:duration="6000" android:startOffset="0" android:repeatCount="infinite" android:repeatMode="restart" android:fromAlpha="0.7" android:toAlpha="0"/>
+</set>

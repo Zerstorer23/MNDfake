@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:orientation="vertical" android:background="@drawable/style_common___list" android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/rlListItem" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@+id/ivIcon" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_alignParentLeft="true" android:layout_centerVertical="true"/>
+        <RelativeLayout android:paddingTop="10dp" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginRight="80dp" android:layout_toRightOf="@+id/ivIcon" android:layout_centerVertical="true">
+            <TextView android:textSize="20sp" android:textColor="@color/msticker_color_preference_text_title" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TEXT"/>
+            <TextView android:textSize="16sp" android:textColor="@color/msticker_color_preference_text_title" android:id="@+id/tvSubDescription" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5dp" android:text="Description" android:layout_below="@+id/tvTitle"/>
+        </RelativeLayout>
+        <Switch android:id="@+id/swState" android:background="@drawable/style_common_preference_switch" android:focusable="false" android:clickable="false" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:thumb="@android:color/transparent" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:track="@android:color/transparent"/>
+        <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="10dp" android:layout_toRightOf="@+id/ivIcon" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+            <TextView android:textSize="18sp" android:textColor="@color/msticker_color_preference_text_title" android:id="@+id/tvValue" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true"/>
+            <TextView android:textSize="14sp" android:textStyle="bold" android:textColor="@color/msticker_color_preference_text_description" android:id="@+id/tvSubValue" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/tvValue" android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

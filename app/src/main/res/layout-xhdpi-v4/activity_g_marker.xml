@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <Button android:background="@drawable/img_common_back" android:visibility="gone" android:layout_width="70dp" android:layout_height="70dp" android:layout_margin="10dp"/>
+    <RelativeLayout android:id="@+id/rlTitle" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <ImageButton android:id="@+id/ibBack" android:background="@drawable/img_common_back" android:layout_width="35dp" android:layout_height="35dp" android:layout_centerVertical="true"/>
+        <TextView android:textSize="22sp" android:textStyle="bold" android:textColor="@color/common_base_color_txt" android:gravity="center_horizontal" android:id="@+id/tvTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:text="@string/gps_checkout_desc_all_map" android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="match_parent" android:layout_below="@+id/rlTitle">
+        <fragment android:id="@+id/map" android:layout_width="match_parent" android:layout_height="match_parent" class="com.google.android.gms.maps.SupportMapFragment"/>
+    </FrameLayout>
+</RelativeLayout>

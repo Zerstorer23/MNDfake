@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/rlDialog" android:layout_width="match_parent" android:layout_height="wrap_content">
+    <RelativeLayout android:id="@+id/body" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:gravity="center_vertical" android:id="@+id/header" android:background="#2a7ef1" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@+id/ivIcon" android:background="@drawable/img_common_dialog_icon_gk" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10dp" android:layout_centerVertical="true"/>
+            <TextView android:textSize="20sp" android:textStyle="bold" android:textColor="#ffffff" android:id="@+id/tvTitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="title" android:layout_toRightOf="@+id/ivIcon" android:layout_centerVertical="true"/>
+        </RelativeLayout>
+        <TextView android:textSize="18sp" android:textColor="#333333" android:id="@+id/tvDescription" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="5dp" android:text="text" android:layout_below="@+id/header"/>
+        <RelativeLayout android:id="@+id/rlBoard" android:background="#dddddd" android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_below="@+id/tvDescription"/>
+        <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/rlButton" android:background="#ffffff" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginLeft="10dp" android:layout_marginRight="10dp" android:layout_below="@+id/rlBoard">
+            <Button android:textSize="16sp" android:textStyle="bold" android:textColor="#2a7ef1" android:id="@+id/btnOK" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="@string/common___ok"/>
+            <Button android:textSize="16sp" android:textColor="#e04949" android:id="@+id/btnCancel" android:background="#00000000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5dp" android:text="@string/common___cancel" android:layout_toLeftOf="@+id/btnOK"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
