@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <item android:state_pressed="true" android:color="@color/msticker_color_drawer_text_clicked"/>
-    <item android:color="@color/common_base_color_txt"/>
-</selector>

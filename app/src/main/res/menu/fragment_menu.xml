@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <item android:icon="@drawable/img_common_refresh" android:id="@+id/action_refresh_policy" android:title="@string/common___refresh" app:showAsAction="always"/>
-    <item android:icon="@drawable/img_common_refresh" android:id="@+id/action_refresh_qrcode" android:title="@string/common___refresh" app:showAsAction="always"/>
-    <item android:icon="@drawable/img_common_refresh" android:id="@+id/action_refresh_qrcode_mdm_release" android:title="@string/common___refresh" app:showAsAction="always"/>
-    <item android:icon="@drawable/img_request_out_second_area" android:id="@+id/action_second_area" android:title="@string/common___request" app:showAsAction="always"/>
-</menu>

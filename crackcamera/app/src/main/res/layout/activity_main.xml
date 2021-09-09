@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/common_mndmdm_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout android:orientation="vertical" android:id="@+id/body" android:background="@color/common_mndmdm_background" android:clickable="true" android:layout_width="match_parent" android:layout_height="match_parent">
+        <RelativeLayout android:gravity="center" android:id="@+id/rlTimeLine" android:visibility="visible" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:id="@+id/rlTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/common_mndmdm_background_soldier_yellow">
+
+                <LinearLayout
+                    android:id="@+id/rlCheckInTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/bt_menu"
+                            android:layout_width="30dp"
+                            android:layout_height="24dp"
+                            android:gravity="center"
+                            android:background="@drawable/img_common_drawer_menu"
+
+                             />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="5"
+                            android:gravity="center"
+
+                            android:orientation="horizontal">
+
+                            <EditText
+                                android:id="@+id/editMND"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="8"
+                                android:ems="10"
+                                android:hint="20/01/29/14/45 형식 준수"
+                                android:inputType="text"
+                                android:text=""
+                                android:visibility="gone" />
+
+                            <Button
+                                android:id="@+id/editButton"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="2"
+                                android:onClick="onClickEditDone"
+                                android:text="확인"
+                                android:visibility="gone" />
+
+                            <ImageView
+                                android:id="@+id/mndLogo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:onClick="onClickMND"
+                                android:tag="logo"
+                                android:visibility="visible"
+                                app:srcCompat="@drawable/img_common_mnsa_logo" />
+
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/bt_del"
+                            android:layout_width="30dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/img_common_drawer_delete"
+                            android:onClick="onClickDelButton" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="5dp">
+
+                        <TextView
+                            android:id="@+id/tvInstallDateTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="설치일시 : "
+                            android:textColor="@color/common_base_color_txt"
+                            android:textSize="26dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvInstallDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="20.01.26 17:56"
+                            android:textColor="@color/common_base_color_txt"
+                            android:textSize="24dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llSuspendTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true">
+
+                        <TextView
+                            android:id="@+id/tvCheckInTimeTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="차단일시 : "
+                            android:textColor="@color/common_base_color_txt"
+                            android:textSize="26dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvCheckInTim"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19.10.10 12:11"
+                            android:textColor="@color/common_base_color_txt"
+                            android:textSize="24dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSubTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rlTitle"
+
+                android:background="@drawable/img_bg_user_soldier_sub" />
+        </RelativeLayout>
+        <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@+id/rlStateCommant" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+            <RelativeLayout android:orientation="horizontal" android:id="@+id/rlButton" android:paddingBottom="10dp" android:layout_width="match_parent" android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnCameraDeny"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/style_mndmdm_btn_deny"
+                    android:gravity="center"
+                    android:text="@string/mndmdm_common_camera_deny"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btnCameraAllowFull"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/style_mndmdm_btn_allow"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="@string/mndmdm_common_camera_allow"
+                    android:textColor="#ffffff"
+                    android:onClick="onSwitchCamera"
+                    android:textSize="16dp"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+            <RelativeLayout android:gravity="center_horizontal" android:background="@color/common_mndmdm_background_border" android:padding="10dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_below="@+id/rlButton">
+                <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true">
+
+                    <TextView
+                        android:id="@+id/tvAgentVersionTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onSwitchMode"
+                        android:text="Version "
+                        android:textColor="@color/common_base_color_txt_gray"
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvAgentVersion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="v2.00.00"
+                        android:textColor="@color/common_base_color_txt"
+                        android:textSize="12dp" />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout android:id="@+id/llTop" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/rlStateCommant" android:layout_below="@+id/rlTimeLine">
+            <RelativeLayout android:orientation="vertical" android:id="@+id/rlCamera" android:layout_width="match_parent" android:layout_height="match_parent">
+
+                <RelativeLayout android:gravity="center" android:orientation="vertical" android:id="@+id/llPolicyState" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_marginBottom="10dp" android:layout_centerInParent="true">
+                    <RelativeLayout android:id="@+id/rlPolicy" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/ivPolicys"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:background="@drawable/img_policy_second_area"
+                            android:visibility="gone" />
+                        <ImageView android:id="@+id/ivPolicysMain" android:background="@drawable/img_policy_second_area_main" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5dp" android:layout_marginBottom="5dp" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true"/>
+                        <RelativeLayout android:id="@+id/relative" android:layout_width="match_parent" android:layout_height="match_parent" android:layout_above="@+id/ivPolicys">
+
+                            <ImageView
+                                android:id="@+id/ivCameraSticker"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:adjustViewBounds="true"
+                                android:foregroundGravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_policy_state_camera_allow"
+                                android:visibility="visible" />
+
+                            <ImageView
+                                android:id="@+id/ivCameraStickerCensor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_marginStart="15dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:layout_marginEnd="15dp"
+                                android:layout_marginRight="15dp"
+                                android:layout_marginBottom="15dp"
+                                android:adjustViewBounds="true"
+                                android:foregroundGravity="center"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/img_policy_state_camera_block"
+                                android:visibility="invisible" />
+
+                            <ProgressBar android:id="@+id/pdProgress" android:visibility="visible" android:layout_width="242dp" android:layout_height="242dp" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/animation_progress" android:layout_centerInParent="true"/>
+                            <ProgressBar android:id="@+id/pdProgressOF" android:visibility="gone" android:layout_width="242dp" android:layout_height="242dp" android:scaleType="fitCenter" android:indeterminateDrawable="@drawable/animation_progress_of" android:layout_centerInParent="true"/>
+
+                            <LinearLayout
+                                android:id="@+id/llDelayTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/ivCameraSticker"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="42dp"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvDay"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="0"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:text="@string/fragment_home_policy_lock_time_00"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvHour"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:text=":"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvMin"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:text=":"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvSec"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="00"
+                                        android:textColor="#ffffff"
+                                        android:textSize="15dp"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</FrameLayout>
