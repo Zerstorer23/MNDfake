@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <dimen name="fragment_mndmdm_title">22sp</dimen>
-    <dimen name="fragment_mndmdm_title_height">150dp</dimen>
-    <dimen name="fragment_mndmdm_title_sub">20sp</dimen>
-</resources>

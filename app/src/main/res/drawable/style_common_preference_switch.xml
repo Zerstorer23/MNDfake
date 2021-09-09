@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt">
-    <item android:state_checked="true" android:state_pressed="true" android:drawable="@drawable/img_common_preference_switch_on"/>
-    <item android:state_focused="false" android:state_checked="true" android:drawable="@drawable/img_common_preference_switch_on"/>
-    <item android:state_checked="false" android:state_pressed="true" android:drawable="@drawable/img_common_preference_switch_off"/>
-    <item android:state_focused="false" android:state_checked="false" android:drawable="@drawable/img_common_preference_switch_off"/>
-</selector>
